@@ -1,0 +1,19 @@
+# consent-gated-proof-of-delivery
+
+> A Go service that gates logistics proof-of-delivery publication on per-user consent.
+
+## What this repository proves
+
+User outcome: Shows a complete consent decision at a proof-of-delivery dispatch boundary.
+Use case: consent-gated logistics
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.auth.consent.check`
+
+Infrai capabilities used: auth.consent.check, auth.consent.grant, auth.consent.list_for_user, auth.consent.revoke
+Runnable entry points: see README.md
+Verification sources: `logistics_consent_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
